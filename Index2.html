@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Single File Website</title>
+
+<style>
+/* ===== Skip link ===== */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: black;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 10px;
+}
+
+/* ===== Navigation (Flex) ===== */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #333;
+  padding: 15px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  color: yellow;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+/* ===== General ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+section {
+  padding: 30px;
+}
+h1 {
+  text-align: center;
+}
+
+/* ===== Images (Box Model) ===== */
+img {
+  border: 3px solid #444;
+  padding: 8px;
+  border-radius: 15px;
+  max-width: 100%;
+}
+
+/* ===== Grid ===== */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  align-items: center;
+}
+
+/* ===== Gallery (Flex) ===== */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Hover effect */
+.gallery img:hover {
+  transform: rotate(2deg) scale(1.05);
+  transition: 0.4s;
+}
+
+/* nth-child */
+.gallery img:nth-child(even) {
+  border-radius: 50%;
+}
+
+footer {
+  background: #eee;
+  text-align: center;
+  padding: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<a href="#main" class="skip-link">Skip to Main Content</a>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#about">About</a>
+</nav>
+
+<main id="main">
+
+<!-- ===== HOME ===== -->
+<section id="home">
+  <h1>Home</h1>
+  <div class="grid-layout">
+    <img src="https://picsum.photos/300/200?random=1" alt="Nature image">
+    <p>
+      This is my single-file HTML project.
+      It demonstrates accessibility, flexbox, grid, hover effects,
+      and advanced CSS selectors.
+    </p>
+  </div>
+</section>
+
+<!-- ===== GALLERY (5 IMAGES) ===== -->
+<section id="gallery">
+  <h1>Gallery</h1>
+  <div class="gallery">
+    <img src="https://picsum.photos/200?random=2" alt="Gallery image 1">
+    <img src="https://picsum.photos/200?random=3" alt="Gallery image 2">
+    <img src="https://picsum.photos/200?random=4" alt="Gallery image 3">
+    <img src="https://picsum.photos/200?random=5" alt="Gallery image 4">
+    <img src="https://picsum.photos/200?random=6" alt="Gallery image 5">
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <h1>About</h1>
+  <img src="https://picsum.photos/300/200?random=7" alt="Profile image">
+  <p>
+    My name is Phú. This website was created for my HTML & CSS assignment.
+    Everything is written in one single HTML file.
+  </p>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 My Website</p>
+</footer>
+
+</body>
+</html>
